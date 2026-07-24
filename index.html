@@ -1,46 +1,53 @@
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Circular Button</title>
+  <style>
+    /* Heading stays at the top of the page */
+    h1 {
+      text-align: center;
+      font-family: sans-serif;
+    }
 
-  h1 {
-    color: red;
-    text-align: center;
-  }
+    /* Container handles the centering and spacing */
+    .button-container {
+      display: flex;
+      justify-content: center; /* Centers horizontally ↔️ */
+      margin-top: 30px;        /* Pushes 30px down ⬇️ */
+    }
 
-  h5 {
-  position: absolute;
-  bottom: 10px;    
-  left: 10px;  
-  color: black;
-}
-  #testing {
-    background-color: black;
-    color: black;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-top: 20px;
-    transition: 200s;
-  }
+    h5 { 
+      position: absolute; bottom: 10px; left: 10px; color: black; 
+    }
 
-  #testing:hover {
-    background-color: black;
-    scale: 100;
-  }
-</style>
+    /* Button styles */
+    #testing {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;     /* Creates the circle ⚪ */
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;        /* Smooth animation ⏱️ */
+    }
 
-<h1>My Test Page</h1>
-<h5>Ver 1.22</h5>
-<button id="testing">Start Test</button>
+    /* Hover effects */
+    #testing:hover {
+      background-color: darkblue; /* Darker blue 🎨 */
+      scale: 1.1;                 /* Expands by 10% 📈 */
+    }
+  </style>
+</head>
+<body>
 
-<script>
-  const StartTesting = document.getElementById("testing");
-  StartTesting.addEventListener("click", function(){
-      StartTesting.textContent = "testing completed!!";
-  });
-</script>
+  <h1>Welcome to My Website</h1>
+  <h5>Ver 1.23</h5>
+
+  <div class="button-container">
+    <button id="testing">Click!</button>
+  </div>
+
+</body>
+</html>
